@@ -8,16 +8,11 @@ export const Statistics = ({
   positivePercentage,
 }) => (
   <div>
-    {console.log(good, neutral, bad, total, positivePercentage)}
-    <h2> Statistics </h2>
-
-    <div>
-      <p>good : {good}</p>
-      <p>neutral : {neutral}</p>
-      <p>bad : {bad}</p>
-      <p>Total : {total}</p>
-      <p> Positive feedback : {positivePercentage}%</p>
-    </div>
+    <p>good : {good}</p>
+    <p>neutral : {neutral}</p>
+    <p>bad : {bad}</p>
+    <p>Total : {total}</p>
+    <p> Positive feedback : {positivePercentage}%</p>
   </div>
 );
 Statistics.propTypes = {

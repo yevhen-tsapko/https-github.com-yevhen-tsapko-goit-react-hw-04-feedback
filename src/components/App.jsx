@@ -10,17 +10,18 @@ export class App extends Component {
     neutral: 0,
     bad: 0,
   };
-  onLeaveFeedback(name) {
+  onLeaveFeedback = name => {
     this.setState(prevState => {
       return { [name]: (prevState[name] += 1) };
     });
-  }
-  countTotalFeedback() {
-    return Object.values(this.state).reduce((total, el) => total + el);
-  }
-  countPositiveFeedbackPercentage() {
-    return Number.parseInt((this.state.good * 100) / this.countTotalFeedback());
-  }
+  };
+
+  countTotalFeedback = () =>
+    Object.values(this.state).reduce((total, el) => total + el);
+
+  countPositiveFeedbackPercentage = () =>
+    Number.parseInt((this.state.good * 100) / this.countTotalFeedback());
+
   render() {
     const options = Object.keys(this.state);
     return (
